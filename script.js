@@ -101,7 +101,7 @@ function kirimPesanan() {
   const total = keranjang.reduce((sum, item) => sum + item.harga * item.jumlah, 0);
   const fullPesan = `Halo! Saya ingin pesan:\n${pesan}\n\nTotal: ${formatRupiah(total)}\n\nNama: ${nama}\nAlamat: ${alamat}`;
 
-  const waLink = `https://wa.me/6281234567890?text=${encodeURIComponent(fullPesan)}`;
+ const waLink = `https://wa.me/6285281974112?text=${encodeURIComponent(fullPesan)}`;
   window.open(waLink, '_blank');
 
   setTimeout(() => {
