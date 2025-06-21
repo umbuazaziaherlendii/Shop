@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snacknesia | UMKM</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#katalog">Katalog</a></li>
+      <li><a href="#promo">Promo</a></li>
+      <li><a href="#pesan">Pesan</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Snacknesia</h1>
+    <p>Camilan Lokal Rasa Nasional</p>
+  </header>
+
+  <div class="container">
+
+    <!-- PROFIL -->
+    <section id="profil">
+      <h2>Profil Usaha</h2>
+      <p><strong>Snacknesia</strong> adalah UMKM yang fokus pada camilan tradisional modern. Berdiri sejak 2022 di Bandung. Kami memproduksi keripik pisang, basreng, dan lainnya dengan bahan berkualitas tanpa pengawet.</p>
+      <p>Kami menerima pemesanan ecer dan grosir. Produk kami telah dinikmati pelanggan di seluruh Indonesia.</p>
+    </section>
+
+    <!-- KATALOG -->
+    <section id="katalog">
+      <h2>Katalog Produk</h2>
+      <div class="produk-grid">
+        <div class="produk-card">
+          <img src="https://via.placeholder.com/300x200" />
+          <h3>Keripik Pisang Cokelat</h3>
+          <p>Rp15.000</p>
+          <button onclick="tambahKeKeranjang('Keripik Pisang Cokelat', 15000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="produk-card">
+          <img src="https://via.placeholder.com/300x200" />
+          <h3>Basreng Pedas</h3>
+          <p>Rp18.000</p>
+          <button onclick="tambahKeKeranjang('Basreng Pedas', 18000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="produk-card">
+          <img src="https://via.placeholder.com/300x200" />
+          <h3>Kacang Bawang</h3>
+          <p>Rp12.000</p>
+          <button onclick="tambahKeKeranjang('Kacang Bawang', 12000)">Tambah ke Keranjang</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO -->
+    <section id="promo" class="promo">
+      <h2>🎉 Promo Spesial</h2>
+      <p>Beli 3 gratis 1 untuk semua produk hingga akhir bulan!</p>
+    </section>
+
+    <!-- KERANJANG -->
+    <section class="keranjang" id="pesan">
+      <h2>🛒 Keranjang Belanja</h2>
+      <ul id="daftarKeranjang"></ul>
+      <div class="total" id="totalHarga">Total: Rp0</div>
+      <button class="kirim" onclick="kirimPesanan()">Kirim via WhatsApp</button>
+    </section>
+
+   <!-- CHECKOUT FORM -->
+<ul id="daftarKeranjang">
+  <!-- Akan diisi otomatis oleh JS -->
+</ul>
+
+<div id="totalHarga">Total: Rp0</div>
+
+<div class="form-pembeli">
+  <label for="namaPembeli">Nama Pembeli</label>
+  <input type="text" id="namaPembeli" placeholder="Nama lengkap">
+
+  <label for="alamatPembeli">Alamat</label>
+  <textarea id="alamatPembeli" rows="3" placeholder="Alamat lengkap..."></textarea>
+
+  <button id="btnCheckout" onclick="kirimPesanan()">Kirim via WhatsApp</button>
+  <button id="btnKosongkan" onclick="kosongkanKeranjang()">Kosongkan Keranjang</button>
+</div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Snacknesia. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
